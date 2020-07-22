@@ -15,7 +15,9 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
+import socket
+if socket.gethostname()=="MacBook-Pro.local":
+    from local_settings import *
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
@@ -26,6 +28,8 @@ SECRET_KEY = 'b(9=$n@74k6n+b6je-f2#wwrx_av*hav-bvyt!+m=1@l^k8_1c'
 DEBUG = True
 
 ALLOWED_HOSTS = ["0.0.0.0"]
+
+
 
 
 # Application definition
